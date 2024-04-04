@@ -4,10 +4,10 @@ import React, { useState } from 'react'
 import {Modal,DownPletform,CouponPop,LoginPop} from './components/Modal'; /* Modal 정보 불러오기 */
 
 export function Header() {
-  const [num,setNum] = useState(0);
-  const [moNum,setMoNum] = useState(0);
+  let [num,setNum] = useState(0);
+  let [moNum,setMoNum] = useState(0);
   let [modalView,setModalView] = useState(false);
-  const [topMenu] = useState([
+  let [topMenu] = useState([
     "홈",
     "업데이트정보",
     "월드",
