@@ -17,7 +17,7 @@ function Modal(props){
     return (
       <>
         <div>
-          <div>게임 다운로드</div>
+          <h3>게임 다운로드</h3>
           <ul>
             <li><a href="#">Windows</a></li>
             <li><a href="#">PS5</a></li>
@@ -34,14 +34,14 @@ function Modal(props){
   function CouponPop(props){
     return (
       <>
-        <div>쿠폰을 다운받읍시다</div>
+        <div><h3>쿠폰을 다운받읍시다</h3></div>
       </>
     )
   }
   function LoginPop(props){
     return (
       <>
-        <div>로그인을 합시다.</div>
+        <div><h3>로그인을 합시다.</h3></div>
       </>
     )
   }

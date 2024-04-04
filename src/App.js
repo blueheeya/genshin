@@ -1,11 +1,14 @@
 /* eslint-disable */
-import Header from './Header';
+import Header from './components/Header';
+import Footer from './components/Footer';
 function App() {
   const header = Header();
+  const footer = Footer();
   return (
-    <div>
+    <>
       <div>{header}</div>
-    </div>
+      <div>{footer}</div>
+    </>
   );
 }
 

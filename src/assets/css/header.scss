@@ -1,0 +1,94 @@
+@use 'style.scss';
+@import 'style.scss';
+header {
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+    background: $Footer;
+    >h1 {
+        width: 100px;
+        height: 60px;
+        background: url("../images/logo.png") no-repeat center;
+        font-size: 0;
+    }
+    >.nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        height: 60px;
+        >ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            height: 100%;
+            >li {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                padding: 10px 16px;
+                cursor: pointer;
+                transition: 0.3s;
+                
+            }
+            >li:hover {
+                background: salmon;
+            }
+            >li.active {
+                background: salmon; 
+            }
+        }
+        >div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center ;
+            gap :20px;
+            height: 100%;
+            >li {
+                display: flex;
+                align-items: center ;
+                height: 100%;
+                cursor: pointer;
+            }
+        }
+    }
+    .btn_download {
+        display: block;
+        height: 100%;
+        padding: 0 20px;
+        border: none;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover {
+            background: #ccc;
+        }
+    }
+}
+
+/*Modal layer*/
+.layer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    
+}
+.modalWrap {
+    position: fixed;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    transform: translate(-50% , -50%);
+    border-radius: 10px;
+    background: #fff;
+    h3 {
+        // font-size: $TitleFont;
+        color: $TitleColor;
+    }
+}
