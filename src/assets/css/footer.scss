@@ -18,13 +18,13 @@ footer {
         &.logoGenshin {
             width: 100px;
             height: 60px;
-            background: url("../images/logo.png") no-repeat center;
+            background: url("../../../public/images/logo.png") no-repeat center;
             font-size: 0;
         }
         &.hoyobus {
             width: 200px;
             height: 50px;
-            background: url("../images/logo_hoyo.png") no-repeat center;
+            background: url("../../../public/images/logo_hoyo.png") no-repeat center;
             background-size: 100% !important;
             font-size: 0;
         }
@@ -65,27 +65,27 @@ footer {
         
     }
     &.naver {
-        background: url("../images/icon_naver.png");
+        background: url("../../../public/images/icon_naver.png");
     }
     &.twitter {
-        background: url("../images/icon_twitter.png");
+        background: url("../../../public/images/icon_twitter.png");
     }
     &.tictok {
-        background: url("../images/icon_tictok.png");
+        background: url("../../../public/images/icon_tictok.png");
     }
     &.youtube {
-        background: url("../images/icon_youtube.png");
+        background: url("../../../public/images/icon_youtube.png");
     }
     &.facebook {
-        background: url("../images/icon_facebook.png");
+        background: url("../../../public/images/icon_facebook.png");
     }
     &.inster {
-        background: url("../images/icon_instar.png");
+        background: url("../../../public/images/icon_instar.png");
     }
     &.hoyolab {
-        background: url("../images/icon_hoyolab.png");
+        background: url("../../../public/images/icon_hoyolab.png");
     }
     &.discord {
-        background: url("../images/icon_discord.png");
+        background: url("../../../public/images/icon_discord.png");
     }
 }

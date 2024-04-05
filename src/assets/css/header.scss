@@ -8,7 +8,7 @@ header {
     >h1 {
         width: 100px;
         height: 60px;
-        background: url("../images/logo.png") no-repeat center;
+        background: url("../../../public/images/logo.png") no-repeat center;
         font-size: 0;
     }
     >.nav {
@@ -24,20 +24,28 @@ header {
             align-items: center;
             
             height: 100%;
+            >a:link {
+                height: 100%;
+                color: #fff;
+            }
             >li {
+                display: flex;
+                align-items: center;
+                height: 100%; 
+            }
+            a,a:link {
                 display: flex;
                 align-items: center;
                 height: 100%;
                 padding: 10px 16px;
-                cursor: pointer;
+                color: #fff;
                 transition: 0.3s;
-                
             }
-            >li:hover {
-                background: salmon;
+            a:hover {
+                background: $primary;
             }
-            >li.active {
-                background: salmon; 
+            a.active {
+                background: $primary; 
             }
         }
         >div {
@@ -50,6 +58,7 @@ header {
                 display: flex;
                 align-items: center ;
                 height: 100%;
+                color: #fff;
                 cursor: pointer;
             }
         }

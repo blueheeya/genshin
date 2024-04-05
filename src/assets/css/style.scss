@@ -7,16 +7,37 @@ html,body {
 }
 $Footer: #333;
 $ColorW: #fff;
+$Default : 16px;
+$Radius : 10px;
 /*body*/
 $TitleFont : 40px;
 $TitleColor : #333;
+$primary : #ff5656;
 $BodyFont : 18px;
 $inner : 90%;
 .container {
     width: 100%;
-    height: 85vh;
+    height: auto;
+    min-height: 780px;
+    .inner {
+        width: $inner;
+        height: 600px;
+        margin: 0 auto;
+        
+    }
 }
-.inner {
-    width: $inner;
-    margin: 0 auto;
+.tabMenuWrap {
+    display: flex;
+    gap :20px;
+    padding: $Default;
+    li {
+        background: #333;
+        padding: $Default;
+        border-radius: $Radius;
+        color: $ColorW;
+        cursor: pointer;
+        &.active{
+            background: $primary;
+        }
+    }
 }

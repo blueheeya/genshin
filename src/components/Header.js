@@ -1,27 +1,43 @@
 import '../assets/css/header.scss'
 import React, { useState } from 'react'
 import {Modal,DownPletform,CouponPop,LoginPop} from './Modal'; /* Modal 정보 불러오기 */
-
+import { NavLink } from 'react-router-dom';
 export function Header() {
   let [num,setNum] = useState(0);
   let [moNum,setMoNum] = useState(0);
   let [modalView,setModalView] = useState(false);
-  let [topMenu] = useState([
-    "홈",
-    "업데이트정보",
-    "월드",
-    "캐릭터",
-    "소식",
-    "일러스트"
-  ]);
-  const [subSection,setSubSection] = useState([
-    <Section1 />,
-    "서브페이지 2",
-    "서브페이지 3",
-    "서브페이지 4",
-    "서브페이지 5",
-    "서브페이지 6"
-  ]);
+  const TopMenu = ([
+    {
+      menuName : "홈",
+      url : "/",
+      active : "active"
+    },
+    {
+      menuName : "업데이트 정보",
+      url : "/updates",
+      active : "active"
+    },
+    {
+      menuName : "월드",
+      url : "/world",
+      active : "active"
+    },
+    {
+      menuName : "캐릭터",
+      url : "/characters",
+      active : "active"
+    },
+    {
+      menuName : "소식",
+      url : "/news",
+      active : "active"
+    },
+    {
+      menuName : "일러스트",
+      url : "/illustrations",
+      active : "active"
+    },
+  ])
   const [modalData,setModalData] = useState([
     <DownPletform />,
     <CouponPop />,
@@ -33,6 +49,9 @@ export function Header() {
   }
   function modalClsose (){
     setModalView(false);
+  }
+  function activeMenu (){
+    TopMenu.active(true);
   }
   return (
     <>
@@ -46,38 +65,18 @@ export function Header() {
       <header>
         <h1>Genshin</h1>
         <div className="nav">
-            <ul>
-              {subSection.map((item,i)=>{
-                return (
-                  <li className={`${i == num ? "active":""}`} onClick={()=>{setNum(i)}}>{topMenu[i]}</li>
-                )
-              })}
-              
-              </ul>
-              <div>
-                <li onClick={()=>{modalOpen(1)}}>쿠폰교환</li>
-                <li onClick={()=>{modalOpen(2)}}>로그인</li>
-                <button className='btn_download' onClick={()=>{modalOpen(0)}}>다운로드</button>
-              </div>
+          <ul>
+            {TopMenu.map((item, i) => (
+              <li className={activeMenu} key={i}><NavLink to={TopMenu[i].url} activeClassName="active">{TopMenu[i].menuName}</NavLink></li>
+            ))}
+          </ul>
+          <div>
+            <li onClick={()=>{modalOpen(1)}}>쿠폰교환</li>
+            <li onClick={()=>{modalOpen(2)}}>로그인</li>
+            <button className='btn_download' onClick={()=>{modalOpen(0)}}>다운로드</button>
+          </div>
         </div>
         </header>
-        <div className='container'>
-          {subSection[num]}
-        </div>
-    </>
-  )
-}
-function Section1(){
-  return (
-    <>
-      <div className='container'>
-        <div className='inner'>visual</div>
-      </div>
-      <div className='container'>
-        <div className='inner'>
-          <h2>최신 소식</h2>
-        </div>
-      </div>
     </>
   )
 }
