@@ -41,3 +41,10 @@ $inner : 90%;
         }
     }
 }
+.pagination {
+    display: flex;
+    ul li {
+        display: flex;
+        background: #333;
+    }
+}
