@@ -21,10 +21,31 @@ $inner : 90%;
     min-height: 780px;
     .inner {
         width: $inner;
-        height: 600px;
         margin: 0 auto;
         
     }
+}
+.listWrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 10px;
+    ul {
+        width: calc(100% - 300px);
+        .text_tt {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .text_date {
+            font-size: 15px;
+            color: #979797;
+        }
+    }
+}
+.imgWrap {
+    width: 300px;
+    height: 100px;
+    background: #ff5656;
 }
 .tabMenuWrap {
     display: flex;
