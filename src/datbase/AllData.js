@@ -20,7 +20,7 @@
             {AllList.map((item,i)=>{
                 return (
                 <div className="listWrap">
-                    <div className="imgWrap"><img src={`../../../public/images/char/${AllList[i].image}`} alt="" /></div>
+                    <div className="imgWrap"><img src={`${process.env.PUBLIC_URL}/images/news/${AllList[i].image}`} alt="" /></div>
                     <ul>
                         <li className="text_tt">{AllList[i].title}</li>
                         <li className="text_date">{AllList[i].data}</li>

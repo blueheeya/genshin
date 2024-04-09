@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import AllData from '../datbase/AllData';
-import NewsData from '../datbase/NewsData';
-import NoticeData from '../datbase/NoticeData';
-import EventData from '../datbase/EventData';
+import NewsList from '../page/NewsList';
 function News(props) {
     const [num,setNum] = useState(0) 
     const newTab = [
@@ -12,10 +9,10 @@ function News(props) {
         "이벤트",
     ]
     const listData = [
-        <AllData />,
-        <NewsData/>,
-        <NoticeData />,
-        <EventData />,
+        <NewsList filterClass={["소식", "공지사항", "이벤트"]} />,
+        <NewsList filterClass={["소식"]} />,
+        <NewsList filterClass={["공지사항"]} />,
+        <NewsList filterClass={["이벤트"]}/>,
     ]
     return (
         <>

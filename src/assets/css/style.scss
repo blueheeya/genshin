@@ -30,6 +30,7 @@ $inner : 90%;
     justify-content: space-between;
     gap: 20px;
     padding: 10px 10px;
+    margin-bottom: 20px;
     ul {
         width: calc(100% - 300px);
         .text_tt {
@@ -44,8 +45,12 @@ $inner : 90%;
 }
 .imgWrap {
     width: 300px;
-    height: 100px;
+    height: 150px;
     background: #ff5656;
+    overflow: hidden;
+    img {
+        width: 100%;
+    }
 }
 .tabMenuWrap {
     display: flex;

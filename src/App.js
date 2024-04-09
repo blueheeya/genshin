@@ -14,24 +14,24 @@ import NewsData from './datbase/NewsData';
 import AllData from './datbase/AllData';
 import EventData from './datbase/EventData';
 import NoticeData from './datbase/NoticeData'
+import NewsList from './page/NewsList';
+import NewsDB from './datbase/NewsDB';
 
 
 function App () {
 
   return (
     <>
-    <BrowserRouter>
         <Header />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/updates" element={<Updates />} />
           <Route path="/world" element={<World />} />
           <Route path="/characters" element={<Characters />} />
-          <Route path="/news" element={<News aData={AllData} newData={NewsData} nData={NoticeData} eData={EventData} />} />
+          <Route path="/news" element={<News aData={AllData} newData={NewsData} nData={NoticeData} eData={EventData} newsData={NewsList} />} />
           <Route path="/illustrations" element={<Illustrations />} />
         </Routes>
-    </BrowserRouter>
-    <Footer />
+      <Footer />
     </>
   );
 }
